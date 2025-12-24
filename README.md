@@ -52,6 +52,7 @@
 ├── base_words.json    # Базовый словарь
 ├── requirements.txt   # Зависимости проекта
 ├── db_tables.png      # Схема БД
+├── venv/              # Виртуальное окружение Python
 └── README.md
 ```
 
@@ -77,13 +78,31 @@ git clone https://github.com/your-username/telegram-vocab-bot.git
 cd telegram-vocab-bot
 ```
 
-### 2. Установка зависимостей
+### 2. Создание виртуального окружения
 
 ```bash
+python -m venv venv
+```
+
+### 3. Активация виртуального окружения
+
+- **Windows:**
+```bash
+venv\Scripts\activate
+```
+- **macOS/Linux:**
+```bash
+source venv/bin/activate
+```
+
+### 4. Установка зависимостей
+
+```bash
+pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-### 3. Переменные окружения
+### 5. Переменные окружения
 
 Создайте `.env` файл:
 
@@ -97,7 +116,7 @@ DB_PASSWORD=your_db_password
 DB_TABLE_NAME=vocab_bot
 ```
 
-### 4. Запуск
+### 6. Запуск бота
 
 ```bash
 python bot_main.py
